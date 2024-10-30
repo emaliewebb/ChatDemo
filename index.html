@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <h1>WebSocket Client</h1>
+   <div id="chatBox">
+    <div id="messages"style="background-color:pink">
+    <!-- Div where received messages will appear;
+     NOT THE STRUCTURE IM NOT TARGETING THE MESSAGE BOX CORRECTLY IN JS -->
+     </div>
+     <label for="messageInput2">You are</label>
+     <input type="text"id="messageInput"placeholder="Name">
+   
+   <div id="displayBoth">
+    <label for="messageInput">Enter Message</label>
+    
+    <input type="text"id="messageInput2">
+    <button id="sendMessage">Send Message</button>
+    <button id="reset"style="background-color:pink ">Clear messages</button>
+    </div>
+   </div> 
+   
+   <div id="break">
+   <br>
+</div>
+   <div id="output"></div>
+   <script src="./client.js"></script>
+</body>
+</html>

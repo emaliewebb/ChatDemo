@@ -1,0 +1,23 @@
+setting up websocket server using node.js
+
+1. install node.js and WebSocket library
+(in Terminal):
+npm init -y
+npm install ws 
+2. Create a file server.js for WebSocket server 
+inside this file, we created a WebSocket server listening on port 8080. We defined a conntection event-whenever a client connects we log connection. We defined message event when server recieves a message it sends a response back to the client.
+3. Create the client(html + JS)
+{Create a file called index.html}
+4.Create Client-side JS
+{create a file called client.js}
+We created a client side script that connects to our WebSocket server once the connection is established users can send messages to the server and recieve real time responses. The script listens for the open events to know when the connection is ready and the message even to handle messages.
+5. Testing our code:
+node server.js
+
+STEP II:
+Modify our WebSocket server to allow users to communicate with each other in real time.
+We do this broadcasting from one user to all connected clients so everyone in the chat can recieve the same message.
+1.Update server.js to us wss.clients.forEach. Checked the client ready state was WebSocket.OPEN and called client.send.
+2.Update index.html to handle chat messages by having a simple UI that placed the messages above the send button, and linked the style.css stylesheet.
+3.Update client.js--when message is recieved we updated code to dynamically create a new div element and set its content to the message.data and append to 'messagesDiv'.
+Made sure Chat window scrolls to the bottom when a new message is recieved.
